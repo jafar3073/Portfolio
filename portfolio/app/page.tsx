@@ -325,21 +325,29 @@ export default function Home() {
         )}
       </header>
 
+            
       {/* HERO */}
       <section
         id="home"
-        className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24 lg:px-10"
+        className="relative min-h-[100svh] overflow-hidden px-4 pt-28 pb-20 sm:px-6 lg:flex lg:items-center lg:px-10 lg:pt-24"
       >
+        {/* Background decorations */}
         <div className="pointer-events-none absolute right-[-200px] top-20 h-[650px] w-[650px] rounded-full bg-emerald-600/10 blur-[130px]" />
+
         <div className="pointer-events-none absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-emerald-900/10 blur-[100px]" />
 
-        <div className="absolute inset-0 grid-pattern opacity-40" />
+        <div className="pointer-events-none absolute inset-0 grid-pattern opacity-40" />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 py-12 lg:gap-20 lg:py-20 lg:grid-cols-[1.15fr_0.85fr]">
-           <div className="animate-fade-up">
-            <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-2">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-              <span className="font-mono text-xs tracking-wide text-emerald-400">
+        {/* Main responsive grid */}
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20 lg:py-20">
+
+          {/* LEFT SIDE - INTRODUCTION */}
+          <div className="min-w-0 animate-fade-up">
+
+            {/* Availability badge */}
+            <div className="mb-8 inline-flex max-w-full items-center gap-3 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-2">
+              <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald-400" />
+              <span className="font-mono text-[10px] tracking-wide text-emerald-400 sm:text-xs">
                 OPEN TO NEW OPPORTUNITIES
               </span>
             </div>
@@ -351,24 +359,28 @@ export default function Home() {
             <h1 className="text-5xl font-extrabold leading-[1.08] tracking-tight sm:text-6xl xl:text-7xl">
               Jafar
               <br />
-              <span className="text-emerald-400">Al-Khfaji.</span>
+              <span className="text-emerald-400">
+                Al-Khfaji.
+              </span>
             </h1>
 
             <h2 className="mt-6 text-xl font-semibold text-zinc-300 md:text-2xl">
               Building digital solutions that matter.
             </h2>
 
-            <p className="mt-6 max-w-xl leading-8 text-zinc-400">
+            <p className="mt-6 max-w-xl text-base leading-8 text-zinc-400">
               I'm a Computer Information Systems student at Mount
               Royal University with an interest in software
               development, data analytics, and building practical
               technology solutions.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            {/* Buttons */}
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-3 rounded-lg bg-emerald-500 px-7 py-4 font-semibold text-black transition hover:-translate-y-1 hover:bg-emerald-400"
+                className="group inline-flex items-center justify-center gap-3 rounded-lg bg-emerald-500 px-7 py-4 font-semibold text-black transition hover:-translate-y-1 hover:bg-emerald-400"
               >
                 Explore My Work
                 <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
@@ -377,14 +389,17 @@ export default function Home() {
               <a
                 href="/JafarAl-Khfaji.pdf"
                 download
-                className="inline-flex items-center gap-3 rounded-lg border border-white/15 px-7 py-4 font-semibold text-white transition hover:border-emerald-500/50 hover:text-emerald-400"
+                className="inline-flex items-center justify-center gap-3 rounded-lg border border-white/15 px-7 py-4 font-semibold text-white transition hover:border-emerald-500/50 hover:text-emerald-400"
               >
                 <Download className="h-5 w-5" />
                 Download Resume
               </a>
+
             </div>
 
-            <div className="mt-12 flex items-center gap-6">
+            {/* Social links */}
+            <div className="mt-10 flex flex-wrap items-center gap-5 sm:gap-6">
+
               {profile.github && (
                 <a
                   href={profile.github}
@@ -421,73 +436,77 @@ export default function Home() {
                 <MapPin size={15} />
                 Calgary, AB
               </span>
+
             </div>
           </div>
+
+          {/* RIGHT SIDE - PROFILE PHOTO */}
+          <div className="relative mx-auto mt-4 w-full max-w-[420px] min-w-0 px-2 pb-8 sm:max-w-[440px] sm:px-0 lg:mt-0 lg:max-w-[480px]">
+
+            {/* Green background glow */}
+            <div className="pointer-events-none absolute -inset-4 rounded-full bg-emerald-500/15 blur-[70px] sm:-inset-8 sm:blur-[90px]" />
+
+            {/* Decorative border */}
+            <div className="pointer-events-none absolute -inset-1 rounded-[30px] border border-emerald-500/20 sm:-inset-3" />
+
+            {/* Photo container */}
+            <div className="group relative overflow-hidden rounded-[24px] border border-emerald-500/40 bg-[#101713] shadow-2xl shadow-emerald-950/40 transition duration-500 hover:-translate-y-2 hover:border-emerald-400/70">
+
+              <img
+                src="/portfolio.png"
+                alt="Professional portrait of Jafar Al-Khfaji"
+                className="block aspect-[4/5] w-full object-cover object-top transition duration-700 group-hover:scale-105"
+              />
+
+              {/* Bottom gradient */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+
+              {/* Name overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
+
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">
+                  Software Developer
+                </p>
+
+                <h3 className="mt-2 text-2xl font-bold text-white">
+                  Jafar Al-Khfaji
+                </h3>
+
+                <p className="mt-1 text-sm text-zinc-300">
+                  Calgary, Alberta
+                </p>
+
+              </div>
+            </div>
+
+            {/* Floating status badge */}
+            <div className="absolute bottom-2 right-0 flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-[#101713] px-4 py-3 shadow-xl sm:-right-4 sm:px-5 sm:py-4">
+
+              <span className="relative flex h-3 w-3 shrink-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
+                <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
+              </span>
+
+              <span className="text-sm font-medium text-white">
+                Open to Opportunities
+              </span>
+
+            </div>
           </div>
 
-          {/* INTERACTIVE CODE CARD */}
-          
-          {/* PROFESSIONAL PROFILE PHOTO */}
-          
-<div className="relative mx-auto w-[calc(100%+2rem)] max-w-none -ml-4 sm:ml-auto sm:w-full sm:max-w-[440px] lg:max-w-[480px]">
+        </div>
 
-  {/* Green background glow */}
-  <div className="absolute -inset-8 rounded-full bg-emerald-500/15 blur-[90px]" />
-
-  {/* Decorative border */}
-  <div className="absolute -inset-3 rounded-[30px] border border-emerald-500/20" />
-
-  {/* Photo container */}
-  <div className="group relative overflow-hidden rounded-[24px] border border-emerald-500/40 bg-[#101713] shadow-2xl shadow-emerald-950/40 transition duration-500 hover:-translate-y-2 hover:border-emerald-400/70">
-
-    <img
-      src="/portfolio.png"
-      alt="Professional portrait of Jafar Al-Khfaji"
-      className="aspect-[4/5] w-full object-cover object-top transition duration-700 group-hover:scale-105"
-    />
-
-    {/* Bottom gradient */}
-    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
-
-    {/* Name overlay */}
-    <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-      <p className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">
-        Software Developer
-      </p>
-
-      <h3 className="mt-2 text-2xl font-bold text-white">
-        Jafar Al-Khfaji
-      </h3>
-
-      <p className="mt-1 text-sm text-zinc-300">
-        Calgary, Alberta
-      </p>
-    </div>
-  </div>
-
-  {/* Floating status badge */}
-  <div className="absolute -bottom-5 right-0 flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-[#101713] px-4 py-3 shadow-xl sm:-right-6 sm:px-5 sm:py-4">
-    <span className="relative flex h-3 w-3">
-      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
-      <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
-    </span>
-
-    <span className="text-sm font-medium text-white">
-      Open to Opportunities
-    </span>
-  </div>
-</div>
-
-
-
+        {/* Scroll indicator - desktop only */}
         <a
           href="#about"
-          className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-xs text-zinc-500 transition hover:text-emerald-400"
+          className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-zinc-500 transition hover:text-emerald-400 lg:flex"
         >
           SCROLL TO EXPLORE
           <ArrowDown className="h-4 w-4 animate-bounce" />
         </a>
+
       </section>
+
 
       {/* ABOUT */}
       <section
