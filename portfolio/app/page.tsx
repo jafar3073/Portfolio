@@ -335,8 +335,8 @@ export default function Home() {
 
         <div className="absolute inset-0 grid-pattern opacity-40" />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-20 py-20 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="animate-fade-up">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-10 py-12 lg:gap-20 lg:py-20 lg:grid-cols-[1.15fr_0.85fr]">
+           <div className="animate-fade-up">
             <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-2">
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
               <span className="font-mono text-xs tracking-wide text-emerald-400">
@@ -428,54 +428,56 @@ export default function Home() {
           {/* INTERACTIVE CODE CARD */}
           
           {/* PROFESSIONAL PROFILE PHOTO */}
-          <div className="relative mx-auto w-full max-w-[440px] lg:max-w-[480px]">
+          
+<div className="relative mx-auto w-[calc(100%+2rem)] max-w-none -ml-4 sm:ml-auto sm:w-full sm:max-w-[440px] lg:max-w-[480px]">
 
-            {/* Green background glow */}
-            <div className="absolute -inset-8 rounded-full bg-emerald-500/15 blur-[90px]" />
+  {/* Green background glow */}
+  <div className="absolute -inset-8 rounded-full bg-emerald-500/15 blur-[90px]" />
 
-            {/* Decorative border */}
-            <div className="absolute -inset-3 rounded-[30px] border border-emerald-500/20" />
+  {/* Decorative border */}
+  <div className="absolute -inset-3 rounded-[30px] border border-emerald-500/20" />
 
-            {/* Photo container */}
-            <div className="group relative overflow-hidden rounded-[24px] border border-emerald-500/40 bg-[#101713] shadow-2xl shadow-emerald-950/40 transition duration-500 hover:-translate-y-2 hover:border-emerald-400/70">
+  {/* Photo container */}
+  <div className="group relative overflow-hidden rounded-[24px] border border-emerald-500/40 bg-[#101713] shadow-2xl shadow-emerald-950/40 transition duration-500 hover:-translate-y-2 hover:border-emerald-400/70">
 
-              <img
-                src="/portfolio.png"
-                alt="Professional portrait of Jafar Al-Khfaji"
-                className="aspect-[4/5] w-full object-cover object-top transition duration-700 group-hover:scale-105"
-              />
+    <img
+      src="/portfolio.png"
+      alt="Professional portrait of Jafar Al-Khfaji"
+      className="aspect-[4/5] w-full object-cover object-top transition duration-700 group-hover:scale-105"
+    />
 
-              {/* Bottom gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
+    {/* Bottom gradient */}
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
 
-              {/* Name overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-7">
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">
-                  Software Developer
-                </p>
+    {/* Name overlay */}
+    <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
+      <p className="font-mono text-xs uppercase tracking-[0.2em] text-emerald-400">
+        Software Developer
+      </p>
 
-                <h3 className="mt-2 text-2xl font-bold text-white">
-                  Jafar Al-Khfaji
-                </h3>
+      <h3 className="mt-2 text-2xl font-bold text-white">
+        Jafar Al-Khfaji
+      </h3>
 
-                <p className="mt-1 text-sm text-zinc-300">
-                  Calgary, Alberta
-                </p>
-              </div>
-            </div>
+      <p className="mt-1 text-sm text-zinc-300">
+        Calgary, Alberta
+      </p>
+    </div>
+  </div>
 
-            {/* Floating status badge */}
-            <div className="absolute -bottom-5 -right-3 flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-[#101713] px-5 py-4 shadow-xl sm:-right-6">
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
-              </span>
+  {/* Floating status badge */}
+  <div className="absolute -bottom-5 right-0 flex items-center gap-3 rounded-xl border border-emerald-500/30 bg-[#101713] px-4 py-3 shadow-xl sm:-right-6 sm:px-5 sm:py-4">
+    <span className="relative flex h-3 w-3">
+      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-40" />
+      <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
+    </span>
 
-              <span className="text-sm font-medium text-white">
-                Open to Opportunities
-              </span>
-            </div>
-          </div>
+    <span className="text-sm font-medium text-white">
+      Open to Opportunities
+    </span>
+  </div>
+</div>
+
 
 
         <a
